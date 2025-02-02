@@ -1,22 +1,18 @@
-Chest X-ray Report Generation and Interactive Radiology Assistant
+🏥 Chest X-ray Report Generation and Interactive Radiology Assistant
 
-Overview
+📌 Overview
 
 The Chest X-ray Report Generation and Interactive Radiology Assistant is an AI-driven system designed to automate radiology report generation from chest X-ray images and assist radiologists interactively. The system leverages deep learning, computer vision, and natural language processing (NLP) to generate accurate and clinically meaningful radiology reports.
 
-Features
+✨ Features
 
-Automated Radiology Report Generation: Generates structured and natural language reports based on input X-ray images.
+✅ Automated Radiology Report Generation: Generates structured and natural language reports based on input X-ray images.
+✅ Interactive Radiology Assistant: Enables radiologists to interact with the model for further insights.
+✅ State-of-the-Art AI Models: Uses image encoders and large language models (LLMs) for accurate report generation.
+✅ Multi-Dataset Support: Trained and evaluated on MIMIC-CXR and CheXpert datasets.
+✅ Evaluation Metrics: Measures performance using BERTScore, NLG metrics, and clinical efficacy tests.
 
-Interactive Radiology Assistant: Enables radiologists to interact with the model for further insights.
-
-State-of-the-Art AI Models: Uses image encoders and large language models (LLMs) for accurate report generation.
-
-Multi-Dataset Support: Trained and evaluated on MIMIC-CXR and CheXpert datasets.
-
-Evaluation Metrics: Measures performance using BERTScore, NLG metrics, and clinical efficacy tests.
-
-Team Members
+👨‍💻 Team Members
 
 Anand Raj
 
@@ -26,83 +22,83 @@ Shanun Randev
 
 Abishek Chiffon Muthu
 
-Datasets
+📊 Datasets
 
-MIMIC-CXR: A large publicly available dataset of chest radiographs and reports.
+📌 MIMIC-CXR: A large publicly available dataset of chest radiographs and reports.
+📌 CheXpert: A dataset containing chest X-rays with radiology labels for classification tasks.
 
-CheXpert: A dataset containing chest X-rays with radiology labels for classification tasks.
+🔍 Methodology
 
-Methodology
+1️⃣ Image Processing
 
-1. Image Processing
+🖼 Preprocessing: Grayscale conversion, noise reduction, contrast enhancement (via OpenCV).
 
-Use OpenCV for preprocessing (grayscale conversion, noise reduction, contrast enhancement).
+📌 Feature Extraction: Pretrained image encoder extracts key image features.
 
-Extract features using a pretrained image encoder.
+2️⃣ Image-Text Embedding Alignment
 
-2. Image-Text Embedding Alignment
+🔗 Transformers align image features with corresponding radiology text embeddings.
 
-Utilize transformers to align image features with corresponding radiology text embeddings.
+3️⃣ Report Generation
 
-3. Report Generation
+📜 LLM-based Generator produces structured medical reports.
 
-Input image embeddings into an LLM-based generator to create detailed radiology reports.
+✅ BERT-based Scoring refines outputs for improved accuracy.
 
-Refine output using BERT-based similarity scoring.
+4️⃣ Interactive QA System
 
-4. Interactive QA System
+🗣 Implements Streamlit-based chatbot for interactive question-answering.
 
-Implements a chatbot interface using Streamlit to enable interactive question-answering based on medical knowledge.
+🛠 Tools & Technologies
 
-Tools and Technologies
+🚀 Deep Learning: PyTorch, Hugging Face Transformers
+🖼 Computer Vision: OpenCV
+📝 Natural Language Processing: NLTK, BERTScore
+🌐 Web Interface: Streamlit
+📏 Evaluation Metrics: BLEU, ROUGE, BERTScore
 
-Deep Learning Frameworks: PyTorch, Hugging Face Transformers
+⚙️ Installation
 
-Computer Vision: OpenCV
-
-Natural Language Processing: NLTK, BERTScore
-
-Web Interface: Streamlit
-
-Evaluation Metrics: BLEU, ROUGE, BERTScore
-
-Installation
-
-Prerequisites
+📌 Prerequisites
 
 Ensure you have the following dependencies installed:
 
 pip install torch torchvision transformers nltk bert-score opencv-python streamlit
 
-Clone Repository
+🔽 Clone Repository
 
 git clone https://github.com/your-repo/chest-xray-report-generator.git
 cd chest-xray-report-generator
 
-Usage
+🚀 Usage
 
-1. Running the Model
+🏥 Running the Model
 
 python run_model.py --input images/sample_xray.jpg
 
-2. Launching the Interactive Assistant
+💬 Launching the Interactive Assistant
 
 streamlit run app.py
 
-Evaluation
+📏 Evaluation
 
-Our model is evaluated based on:
+🧠 BERTScore: Measures semantic similarity between generated and ground truth reports.
+📌 BLEU & ROUGE: Measures text similarity and coherence.
+✅ Clinical Efficacy: Assessed by expert radiologists.
 
-BERTScore: Measures semantic similarity between generated and ground truth reports.
+🚀 Future Enhancements
 
-BLEU & ROUGE: Measures text similarity and coherence.
+🔍 Expand dataset support for better generalization.
 
-Clinical Efficacy: Assessed by expert radiologists.
+🤖 Integrate reinforcement learning for improved report coherence.
 
-Future Enhancements
+☁️ Deploy the model as a cloud-based API.
 
-Expand dataset support for better generalization.
+📜 License
 
-Integrate reinforcement learning for improved report coherence.
+This project is licensed under the MIT License.
 
-Deploy the model as a cloud-based API.
+📧 Contact
+
+For queries, contact Anand Raj at 📩 anand.raj@gwu.edu.
+
