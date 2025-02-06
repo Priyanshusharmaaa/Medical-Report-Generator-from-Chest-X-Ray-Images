@@ -248,6 +248,8 @@ This metric evaluates the longest common subsequence between the generated and r
 
 Graph snippets for **(BioGPT + Image Encoder)** and **(BioGPT + Image Encoder + ChexNet Labels)** are provided below:
 
+![image](https://github.com/user-attachments/assets/7db55f12-ca80-4f3d-8d9c-7ac39579754e)
+
 - **Model 1: BioVilt + Alignment + BioGPT**
 
   ![Model 1 Results](https://github.com/user-attachments/assets/a45cb640-50bc-4556-89f6-06e068e8a24a)
