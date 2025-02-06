@@ -252,13 +252,19 @@ Graph snippets for **(BioGPT + Image encoder) and (BioGPT + image encoder + chex
 
 ![image](https://github.com/user-attachments/assets/473e21b3-a567-41ba-bcab-2632154aa5f4)
 
-#### Model 1: BioVilt + Alignment + BioGPT
+###                              Model 1: BioVilt + Alignment + BioGPT
 
 ![image](https://github.com/user-attachments/assets/a45cb640-50bc-4556-89f6-06e068e8a24a)
 
-#### Model 2: BioVilt + ChexNet + Alignment + BioGPT
+###                              Model 2: BioVilt + ChexNet + Alignment + BioGPT
 
 ![image](https://github.com/user-attachments/assets/598b4263-2dc2-4620-9587-648e3701a79b)
+
+## Challenges Faced: 
+
+Limited computation power.
+Smaller models fail to capture the findings, larger models are required.
+Clinical findings extraction is done by a model which introduces errors.
 
 ## References
 
