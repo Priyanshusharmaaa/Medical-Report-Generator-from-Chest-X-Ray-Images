@@ -102,10 +102,10 @@ The project is structured into several key stages:
 
 #### c. Dataset Split
 A custom function `get_dataloaders` creates PyTorch DataLoader objects for training and validation with parameters:
-- `batch_size`: Default is 8.
-- `train_split`: 85% training, 15% validation.
-- `num_workers`: Default is 4 for faster loading.
-- `collate_fn`: Custom function to merge samples, particularly for variable-length inputs like text.
+- **Batch Size:** Default is 8.
+- **Train Split:** 85% training, 15% validation.
+- **Num Workers:** Default is 4 for faster loading.
+- **Collate Function:** Custom function to merge samples, particularly for variable-length inputs like text.
 
 ---
 
@@ -246,7 +246,7 @@ In this analysis, a comprehensive comparison is conducted between the two distin
 **ROUGE-L (Longest Common Subsequence):**  
 This metric evaluates the longest common subsequence between the generated and reference texts, giving credit for correctly ordered content even if the content is spread out.
 
-Graph snippets for **(BioGPT + Image encoder)** and **(BioGPT + Image encoder + ChexNet Labels)** are provided below:
+Graph snippets for **(BioGPT + Image Encoder)** and **(BioGPT + Image Encoder + ChexNet Labels)** are provided below:
 
 - **Model 1: BioVilt + Alignment + BioGPT**
 
@@ -275,7 +275,7 @@ Graph snippets for **(BioGPT + Image encoder)** and **(BioGPT + Image encoder + 
 
 The model is deployed using **Streamlit** on an **AWS EC2** instance for real-time inference.
 
-![image](https://github.com/user-attachments/assets/1afdc5d0-a94c-4271-aafd-9f501c00ce27)
+![Deployment on AWS EC2](https://github.com/user-attachments/assets/1afdc5d0-a94c-4271-aafd-9f501c00ce27)
 
 ---
 
