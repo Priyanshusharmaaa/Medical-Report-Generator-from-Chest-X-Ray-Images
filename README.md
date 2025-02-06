@@ -123,6 +123,8 @@ A custom function `get_dataloaders` creates PyTorch DataLoader objects for train
 3. **Dataset Preparation:**  
    The binary labels are integrated into a CSV file to enrich the dataset for multi-label classification.
 
+![image](https://github.com/user-attachments/assets/29b4921c-d5e8-431d-ba86-8b73ca16b8b6)
+
 ---
 
 ### 3. ChexNet for Structural Findings Extraction
