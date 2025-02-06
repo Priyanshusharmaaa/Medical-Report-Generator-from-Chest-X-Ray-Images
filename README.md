@@ -191,6 +191,8 @@ Two distinct model architectures were experimented with to generate medical repo
 
 #### Model 2: BioVilt + ChexNet + Alignment + BioGPT
 
+![image](https://github.com/user-attachments/assets/f7da053d-97ec-43d3-b66c-c976ecd269ed)
+
 1. **Components:**
    - **BioVilt:**  
      - ResNet-50 based image encoder.
