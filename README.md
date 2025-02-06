@@ -268,7 +268,10 @@ Graph snippets for **(BioGPT + Image encoder) and (BioGPT + image encoder + chex
 
 - Clinical findings extraction is done by a model which introduces errors.
 
+## Deployment of Model using Streamlit on AWS EC-2
 
+![image](https://github.com/user-attachments/assets/01a3bebf-fb5b-42ea-b3af-773a92c208f2)
+ 
 ## References
 
 A comprehensive list of sources and research papers is available upon request or can be found within the project documentation. Key references include:
