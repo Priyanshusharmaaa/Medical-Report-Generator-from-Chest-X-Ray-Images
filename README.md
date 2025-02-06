@@ -13,6 +13,9 @@
   - [4. Model Architectures](#4-model-architectures)
     - [Model 1: BioVilt + Alignment + BioGPT](#model-1-biovilt--alignment--biogpt)
     - [Model 2: BioVilt + ChexNet + Alignment + BioGPT](#model-2-biovilt--chexnet--alignment--biogpt)
+- [Results](#results)
+- [Challenges Faced](#challenges-faced)
+- [Deployment](#deployment)
 - [References](#references)
 
 ---
@@ -43,7 +46,7 @@ The project uses the **MIMIC-CXR** dataset, which includes:
 - Associated radiology reports in XML format
 
 **Key Dataset Features:**
-- **Image File Path:** Link or location of the corresponding chest X-ray image.
+- **Image File Path:** Location/link of the corresponding chest X-ray image.
 - **Findings:** Textual descriptions of abnormalities or observations.
 - **Impression:** A concise summary of the primary conclusions.
 
@@ -123,7 +126,7 @@ A custom function `get_dataloaders` creates PyTorch DataLoader objects for train
 3. **Dataset Preparation:**  
    The binary labels are integrated into a CSV file to enrich the dataset for multi-label classification.
 
-![image](https://github.com/user-attachments/assets/29b4921c-d5e8-431d-ba86-8b73ca16b8b6)
+![CheXbert Workflow](https://github.com/user-attachments/assets/29b4921c-d5e8-431d-ba86-8b73ca16b8b6)
 
 ---
 
@@ -146,7 +149,7 @@ A custom function `get_dataloaders` creates PyTorch DataLoader objects for train
   - **Scheduler:** ReduceLROnPlateau.
   - **Metric:** Achieved an F1-micro score of **0.70**.
 
-![image](https://github.com/user-attachments/assets/eaf445e8-5696-43d0-998b-4905b36507e6)
+![ChexNet Workflow](https://github.com/user-attachments/assets/eaf445e8-5696-43d0-998b-4905b36507e6)
 
 ---
 
@@ -172,7 +175,7 @@ Two distinct model architectures were experimented with to generate medical repo
    - **Alignment Module:**  
      - Text encoder: Microsoft BioGPT.
      - Projection layers map image embeddings to BioGPT’s 768-dimensional space.
-     - Loss Function: Contrastive Loss.
+     - **Loss Function:** Contrastive Loss.
    - **BioGPT (PEFT via LoRA):**  
      - **Rank:** 16  
      - **Alpha:** 32  
@@ -193,7 +196,7 @@ Two distinct model architectures were experimented with to generate medical repo
 
 #### Model 2: BioVilt + ChexNet + Alignment + BioGPT
 
-![image](https://github.com/user-attachments/assets/f7da053d-97ec-43d3-b66c-c976ecd269ed)
+![Model 2 Overview](https://github.com/user-attachments/assets/f7da053d-97ec-43d3-b66c-c976ecd269ed)
 
 1. **Components:**
    - **BioVilt:**  
@@ -215,7 +218,7 @@ Two distinct model architectures were experimented with to generate medical repo
    - **Alignment Module:**  
      - Text encoder: Microsoft BioGPT.
      - Projection layers map image embeddings to 768 dimensions and separately project text from the ground truth reports.
-     - Loss Function: Contrastive Loss.
+     - **Loss Function:** Contrastive Loss.
    - **BioGPT (PEFT via LoRA):**  
      - **Rank:** 16  
      - **Alpha:** 32  
@@ -236,45 +239,47 @@ Two distinct model architectures were experimented with to generate medical repo
 
 ---
 
-## Results:
+## Results
 
-In this analysis, a comprehensive comparison is conducted between 2 distinct models. ROUGE (Recall Oriented 
-Understudy for Gisting Evaluation) metric is used as the primary evaluation metric. ROUGE measures the 
-overlap of predicted text against reference text across several dimensions, including recall, precision, and f1-
-score to evaluate the quality of generated summaries.
+In this analysis, a comprehensive comparison is conducted between the two distinct models. The **ROUGE** metric (Recall Oriented Understudy for Gisting Evaluation) is used as the primary evaluation metric, measuring the overlap between generated and reference text across several dimensions such as recall, precision, and F1-score.
 
-**ROUGE-L (Longest Common Subsequence)** - Evaluates the longest common subsequence between 
-generated and reference text. The metric considers the sequence structure and how well the order of 
-words in the generated summary matches the reference summary. Rouge L gives credit for correctly 
-ordered content even if the content is spread across the summary.
+**ROUGE-L (Longest Common Subsequence):**  
+This metric evaluates the longest common subsequence between the generated and reference texts, giving credit for correctly ordered content even if the content is spread out.
 
-Graph snippets for **(BioGPT + Image encoder) and (BioGPT + image encoder + chexNet Labels)**
+Graph snippets for **(BioGPT + Image encoder)** and **(BioGPT + Image encoder + ChexNet Labels)** are provided below:
 
-![image](https://github.com/user-attachments/assets/73ce38a0-5651-462c-809f-074211689e6e)
+- **Model 1: BioVilt + Alignment + BioGPT**
 
-###                              Model 1: BioVilt + Alignment + BioGPT
+  ![Model 1 Results](https://github.com/user-attachments/assets/a45cb640-50bc-4556-89f6-06e068e8a24a)
 
-![image](https://github.com/user-attachments/assets/a45cb640-50bc-4556-89f6-06e068e8a24a)
+- **Model 2: BioVilt + ChexNet + Alignment + BioGPT**
 
-###                              Model 2: BioVilt + ChexNet + Alignment + BioGPT
+  ![Model 2 Results](https://github.com/user-attachments/assets/598b4263-2dc2-4620-9587-648e3701a79b)
 
-![image](https://github.com/user-attachments/assets/598b4263-2dc2-4620-9587-648e3701a79b)
+---
 
-## Challenges Faced: 
+## Challenges Faced
 
-- Limited computation power.
+- **Limited Computation Power:**  
+  Resource constraints affected training and model size selection.
 
-- Smaller models fail to capture the findings, larger models are required.
+- **Model Complexity:**  
+  Smaller models failed to capture detailed findings, while larger models were required for improved accuracy.
 
-- Clinical findings extraction is done by a model which introduces errors.
+- **Error Propagation:**  
+  The clinical findings extraction model introduces some errors that can impact the final report quality.
 
-## Deployment of Model using Streamlit on AWS EC-2
+---
 
-![image](https://github.com/user-attachments/assets/01a3bebf-fb5b-42ea-b3af-773a92c208f2)
- 
+## Deployment
+
+The model is deployed using **Streamlit** on an **AWS EC2** instance for real-time inference.
+
+![Deployment on AWS EC2](https://github.com/user-attachments/assets/01a3bebf-fb5b-42ea-b3af-773a92c208f2)
+
+---
+
 ## References
-
-A comprehensive list of sources and research papers is available upon request or can be found within the project documentation. Key references include:
 
 - **CheXbert:** [CheXbert GitHub Repository](https://github.com/stanfordmlgroup/CheXbert)
 - **ChexNet:** [ChexNet: Radiologist-Level Pneumonia Detection on Chest X-Rays (arXiv)](https://arxiv.org/abs/1711.05225)
