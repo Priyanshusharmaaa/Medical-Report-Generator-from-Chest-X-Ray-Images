@@ -273,11 +273,6 @@ Graph snippets for **(BioGPT + Image encoder) and (BioGPT + image encoder + chex
 
 A comprehensive list of sources and research papers is available upon request or can be found within the project documentation. Key references include:
 
-- **CheXbert:** [Link to CheXbert Paper/Repository]
-- **ChexNet:** [Link to ChexNet Paper/Repository]
-- **BioVilt:** [Link to BioVilt Paper/Repository]
-- **BioGPT:** [Link to BioGPT Paper/Repository]
-- **PEFT Techniques (LoRA):** [Link to Relevant Documentation or Research]
 - **CheXbert:** [CheXbert GitHub Repository](https://github.com/stanfordmlgroup/CheXbert)
 - **ChexNet:** [ChexNet: Radiologist-Level Pneumonia Detection on Chest X-Rays (arXiv)](https://arxiv.org/abs/1711.05225)
 - **BioVilt:** [BioViLT: A Vision-Language Transformer for Medical Image Report Generation (arXiv)](https://arxiv.org/abs/2206.09993)
