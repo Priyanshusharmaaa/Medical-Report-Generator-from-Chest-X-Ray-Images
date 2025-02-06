@@ -19,9 +19,13 @@ The **Chest X-ray Report Generation and Interactive Radiology Assistant** is an 
 The MIMIC-CXR is a publicly available chest X-ray dataset for chest radiography research.It comprises 15,000 
 chest X-ray images in dicom format and their associated radiology reports in xml format. The dataset has the 
 following key features:
+
 ● **Image File Path**: Location or link to the corresponding chest X-ray image.
+
 ● **Findings**: A textual description of abnormalities or observations made by the radiologist.
+
 ● **Impression**: A concise summary of the radiologist's primary conclusions.
+
 The dataset has 14 labels corresponding to common chest X-ray pathologies.The pathology labels include 
 Atelectasis, Cardiomegaly, Consolidation, Edema, Enlarged Cardiomediastinum, Fracture, Lung Lesion, Lung 
 Opacity, Pleural Effusion, Pleural Other, Pneumonia, Pneumothorax, Support Devices, and No Finding.
