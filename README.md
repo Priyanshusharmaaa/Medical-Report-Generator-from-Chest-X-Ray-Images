@@ -262,11 +262,11 @@ Graph snippets for **(BioGPT + Image encoder) and (BioGPT + image encoder + chex
 
 ## Challenges Faced: 
 
-Limited computation power.
+- Limited computation power.
 
-Smaller models fail to capture the findings, larger models are required.
+- Smaller models fail to capture the findings, larger models are required.
 
-Clinical findings extraction is done by a model which introduces errors.
+- Clinical findings extraction is done by a model which introduces errors.
 
 
 ## References
