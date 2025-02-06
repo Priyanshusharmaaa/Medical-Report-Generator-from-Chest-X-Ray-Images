@@ -146,6 +146,8 @@ A custom function `get_dataloaders` creates PyTorch DataLoader objects for train
   - **Scheduler:** ReduceLROnPlateau.
   - **Metric:** Achieved an F1-micro score of **0.70**.
 
+![image](https://github.com/user-attachments/assets/eaf445e8-5696-43d0-998b-4905b36507e6)
+
 ---
 
 ### 4. Model Architectures
@@ -233,6 +235,30 @@ Two distinct model architectures were experimented with to generate medical repo
    - **Report Generation:** The concatenated embeddings are fed into BioGPT to generate the final report.
 
 ---
+
+## Results:
+
+In this analysis, a comprehensive comparison is conducted between 2 distinct models. ROUGE (Recall Oriented 
+Understudy for Gisting Evaluation) metric is used as the primary evaluation metric. ROUGE measures the 
+overlap of predicted text against reference text across several dimensions, including recall, precision, and f1-
+score to evaluate the quality of generated summaries.
+
+**ROUGE-L (Longest Common Subsequence)** - Evaluates the longest common subsequence between 
+generated and reference text. The metric considers the sequence structure and how well the order of 
+words in the generated summary matches the reference summary. Rouge L gives credit for correctly 
+ordered content even if the content is spread across the summary.
+
+Graph snippets for **(BioGPT + Image encoder) and (BioGPT + image encoder + chexNet Labels)**
+
+![image](https://github.com/user-attachments/assets/473e21b3-a567-41ba-bcab-2632154aa5f4)
+
+#### Model 1: BioVilt + Alignment + BioGPT
+
+![image](https://github.com/user-attachments/assets/a45cb640-50bc-4556-89f6-06e068e8a24a)
+
+#### Model 2: BioVilt + ChexNet + Alignment + BioGPT
+
+![image](https://github.com/user-attachments/assets/598b4263-2dc2-4620-9587-648e3701a79b)
 
 ## References
 
