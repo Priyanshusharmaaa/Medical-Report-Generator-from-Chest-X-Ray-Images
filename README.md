@@ -276,7 +276,7 @@ A comprehensive list of sources and research papers is available upon request or
 - **CheXbert:** [CheXbert GitHub Repository](https://github.com/stanfordmlgroup/CheXbert)
 - **ChexNet:** [ChexNet: Radiologist-Level Pneumonia Detection on Chest X-Rays (arXiv)](https://arxiv.org/abs/1711.05225)
 - **BioVilt:** [BioViLT: A Vision-Language Transformer for Medical Image Report Generation (arXiv)](https://arxiv.org/abs/2206.09993)
-- **BioGPT:** [BioGPT GitHub Repository](https://github.com/microsoft/BioGPT)
+- **BioGPT:** [BioGPT GitHub Repository](https://arxiv.org/abs/2210.10341)
 - **PEFT Techniques (LoRA):** [LoRA: Low-Rank Adaptation for Fast Training of Neural Networks (arXiv)](https://arxiv.org/abs/2106.09685)
 
 ---
