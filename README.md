@@ -275,7 +275,7 @@ Graph snippets for **(BioGPT + Image encoder)** and **(BioGPT + Image encoder + 
 
 The model is deployed using **Streamlit** on an **AWS EC2** instance for real-time inference.
 
-![Deployment on AWS EC2](https://github.com/user-attachments/assets/01a3bebf-fb5b-42ea-b3af-773a92c208f2)
+![image](https://github.com/user-attachments/assets/1afdc5d0-a94c-4271-aafd-9f501c00ce27)
 
 ---
 
