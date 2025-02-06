@@ -250,7 +250,7 @@ ordered content even if the content is spread across the summary.
 
 Graph snippets for **(BioGPT + Image encoder) and (BioGPT + image encoder + chexNet Labels)**
 
-![image](https://github.com/user-attachments/assets/473e21b3-a567-41ba-bcab-2632154aa5f4)
+![image](https://github.com/user-attachments/assets/168d5950-9275-4e2e-a791-6daa6edd7663)
 
 ###                              Model 1: BioVilt + Alignment + BioGPT
 
